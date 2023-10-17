@@ -15,7 +15,7 @@
     ],
     "hobilerim":["Basketbol Oynamak", "Kod Yazmak","Bilgisayar Oyunları Oynamak","Anime izlemek"],
     "favori_animem":{"isim":"Naruto","bolum_sayısı":720 },
-    "favori_oyunum":{"isim":"Ace Online(AirRivals)","yapım_yılı":2006,"tur":"MMORPG"}
+    "favori_oyunum":{"isim":"AirRivals","yapım_yılı":2006,"tur":"MMORPG","playble":true,"kisi_sayisi":null}
 
 
 }
