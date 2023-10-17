@@ -1,0 +1,20 @@
+{
+    "ad":"Safa",
+    "soyad":"Uzunali",
+    "dogum_tarihi":"29/09/2000",
+    "e-posta":"xxxxxxx@xxx.xxx",
+    "egitim": [
+        {
+            "okul":"Necmettin Erbakan Üniversitesi",
+            "bolum":"Yönetim Bilişim Sistemleri"
+        },
+        {
+            "okul":"Özel Açı Koleji"
+        }
+    ],
+    "hobilerim":[
+        "Basketbol Oynamak",
+        "Kod Yazmak",
+        "Bilgisayar Oyunları Oynamak"
+    ] 
+}
