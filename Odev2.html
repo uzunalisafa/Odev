@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odev2</title>
+</head>
+
+<body>
+    <input id="giris" type="text" />
+    <script>
+        var inputElement = document.getElementById("giris");
+        inputElement.classList.add("form-input");
+        if (inputElement.type === "text")
+            inputElement.type = "password";
+        if (inputElement.classList.contains("form-input"))
+            inputElement.placeholder = "Lütfen Şifrenizi Giriniz";
+        var passwordInput = document.querySelector("input.form-input[type='password']");
+        passwordInput.disabled = true;
+
+        var submitButton = document.createElement("button");
+        submitButton.type = "submit";
+
+    submitButton.textContent = "Giriş Yap";
+        document.body.appendChild(submitButton);
+        submitButton.addEventListener("click", function () {
+            alert("Lütfen Şifrenizi Giriniz ");
+        });
+
+
+    </script>
+</body>
+
+</html>
