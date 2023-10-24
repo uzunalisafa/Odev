@@ -10,24 +10,26 @@
 <body>
     <input id="giris" type="text" />
     <script>
-        var inputElement = document.getElementById("giris");
-        inputElement.classList.add("form-input");
-        if (inputElement.type === "text")
-            inputElement.type = "password";
-        if (inputElement.classList.contains("form-input"))
-            inputElement.placeholder = "Lütfen Şifrenizi Giriniz";
-        var passwordInput = document.querySelector("input.form-input[type='password']");
-        passwordInput.disabled = true;
+        const girisNesnesi =document.getElementById("giris");
+        girisNesnesi.classList.add("form-input");
 
-        var submitButton = document.createElement("button");
+        const sifreNesnesi =document.querySelector("#giris");
+        sifreNesnesi.type ="password";
+
+        sifreNesnesi.placeholder ="Lütfen Şifrenizi Giriniz";
+
+        const pasifGirisNesnesi = document.querySelector("#giris");
+        pasifGirisNesnesi.disabled = true;
+
+        const submitButton = document.createElement("button");
         submitButton.type = "submit";
+        submitButton.textContent = "Giriş Yap";
 
-    submitButton.textContent = "Giriş Yap";
         document.body.appendChild(submitButton);
         submitButton.addEventListener("click", function () {
+       
             alert("Lütfen Şifrenizi Giriniz ");
         });
-
 
     </script>
 </body>
