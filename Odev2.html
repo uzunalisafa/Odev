@@ -8,8 +8,13 @@
 </head>
 
 <body>
-    <input id="giris" type="text" />
-    <script>
+  
+    <script> 
+        const giris= document.createElement("input");
+        giris.type = "text";
+        giris.id = "giris";
+        document.body.appendChild(giris);
+
         const girisNesnesi =document.getElementById("giris");
         girisNesnesi.classList.add("form-input");
 
@@ -21,12 +26,12 @@
         const pasifGirisNesnesi = document.querySelector("#giris");
         pasifGirisNesnesi.disabled = true;
 
-        const submitButton = document.createElement("button");
-        submitButton.type = "submit";
-        submitButton.textContent = "Giriş Yap";
+        const gonderButonu = document.createElement("button");
+        gonderButonu.type = "submit";
+        gonderButonu.textContent = "Giriş Yap";
 
-        document.body.appendChild(submitButton);
-        submitButton.addEventListener("click", function () {
+        document.body.appendChild(gonderButonu);
+        gonderButonu.addEventListener("click", function () {
        
             alert("Lütfen Şifrenizi Giriniz ");
         });
