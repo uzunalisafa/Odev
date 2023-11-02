@@ -8,31 +8,46 @@
 </head>
 
 <body>
-  
-    <script> 
-        const giris= document.createElement("input");
-        giris.type = "text";
-        giris.id = "giris";
-        document.body.appendChild(giris);
 
-        const girisNesnesi =document.getElementById("giris");
-        girisNesnesi.classList.add("form-input");
+    <input id="giris" type="text" />
 
-        const sifreNesnesi =document.querySelector("#giris");
-        sifreNesnesi.type ="password";
+    <script>
+        // ilk adım
+        const girisInput = document.getElementById('giris');
 
-        sifreNesnesi.placeholder ="Lütfen Şifrenizi Giriniz";
+        // DOM'a id'si giris olan model gelmiş mi?
+        if (girisInput) {
+            girisInput.classList.add('form-input');
+        }
 
-        const pasifGirisNesnesi = document.querySelector("#giris");
+
+        // ikinci adım
+        const textToPasswordInput = document.querySelector('input');
+
+        if (textToPasswordInput) {
+            textToPasswordInput.type = 'password';
+        }
+        // üçüncü adım
+        const textPlace = document.querySelectorAll('#giris .form-input');
+
+        if (textPlace) {
+            textPlace.placeholder = "Lütfen Şifrenizi Giriniz";
+        }
+        // dördüncü adım
+        const pasifGirisNesnesi = document.querySelector("#giris .form-input");
+
+        if(pasifGirisNesnesi){
         pasifGirisNesnesi.disabled = true;
-
+        }
+        // beşinci adım   
         const gonderButonu = document.createElement("button");
         gonderButonu.type = "submit";
         gonderButonu.textContent = "Giriş Yap";
+        // altıncı adım
 
         document.body.appendChild(gonderButonu);
         gonderButonu.addEventListener("click", function () {
-       
+
             alert("Lütfen Şifrenizi Giriniz ");
         });
 
