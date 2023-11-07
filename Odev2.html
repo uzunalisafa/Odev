@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odev2</title>
 </head>
-
 <body>
-
     <input id="giris" type="text" />
 
     <script>
-        // ilk adım
+        // İlk adım
         const girisInput = document.getElementById('giris');
 
-        // DOM'a id'si giris olan model gelmiş mi?
+        // DOM'da id'si 'giris' olan eleman var mı?
         if (girisInput) {
             girisInput.classList.add('form-input');
         }
 
-
-        // ikinci adım
+        // İkinci adım
         const textToPasswordInput = document.querySelector('input');
 
         if (textToPasswordInput) {
             textToPasswordInput.type = 'password';
         }
-        // üçüncü adım
-        const textPlace = document.querySelectorAll('#giris .form-input');
 
-        if (textPlace) {
-            textPlace.placeholder = "Lütfen Şifrenizi Giriniz";
-        }
-        // dördüncü adım
-        const pasifGirisNesnesi = document.querySelector("#giris .form-input");
+        // Üçüncü adım
+        const textPlaces = document.querySelectorAll('input[type="password"]');
 
-        if(pasifGirisNesnesi){
-        pasifGirisNesnesi.disabled = true;
+        if (textPlaces) {
+            textPlaces.forEach(function (input) {
+                input.placeholder = "Lütfen Şifrenizi Giriniz";
+            });
+        } else {
+          
+            alert("Şifre girişi alanı bulunamadı.");
         }
-        // beşinci adım   
+
+        // Dördüncü adım
+        const pasifGirisNesnesi = document.querySelectorAll("input[type='password']");
+
+        if (pasifGirisNesnesi) {
+            pasifGirisNesnesi.forEach(function (input) {
+                input.disabled = true;
+            });
+        }
+    </script>
+    <script>
+        // Beşinci adım
         const gonderButonu = document.createElement("button");
         gonderButonu.type = "submit";
         gonderButonu.textContent = "Giriş Yap";
-        // altıncı adım
 
+        // Altıncı adım
         document.body.appendChild(gonderButonu);
         gonderButonu.addEventListener("click", function () {
-
-            alert("Lütfen Şifrenizi Giriniz ");
+            alert("Lütfen Şifrenizi Giriniz");
         });
-
     </script>
 </body>
-
 </html>
